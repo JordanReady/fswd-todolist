@@ -14,7 +14,7 @@ import {
     var htmlString = response.tasks.map(function(task) {
       return "<div class='col-12 mb-3 p-2 border rounded task d-flex justify-content-between' data-id='" + task.id + "'>" + 
       "<input type='checkbox' class='mark-complete mr-2' data-id='" + task.id + "'" + (task.completed ? "checked" : "") + ">" +
-      "<p class='task-content d-inline'>" + task.content + "</p>" +
+      "<p class='task-content d-inline px-2'>" + task.content + "</p>" +
       "<button class='delete float-right btn btn-outline-danger btn-sm' data-id='" + task.id + "'>Delete</button>" +
     "</div>";
     });
@@ -25,7 +25,7 @@ import {
     var htmlString = response.tasks.map(function(task) {
       return "<div class='col-12 mb-3 p-2 border rounded task d-flex justify-content-between'>" + 
         "<input type='checkbox' class='mark-complete mr-2' data-id='" + task.id + "'" + (task.completed ? "checked" : "") + ">" +
-        "<p class='task-content d-inline'>" + task.content + "</p>" +
+        "<p class='task-content d-inline px-2'>" + task.content + "</p>" +
         "<button class='delete float-right btn btn-outline-danger btn-sm' data-id='" + task.id + "'>Delete</button>" +
       "</div>";
     });
