@@ -12,10 +12,10 @@ import {
 
   indexTasks(function (response) {
     var htmlString = response.tasks.map(function(task) {
-      return "<div class='col-12 mb-3 p-2 border rounded task d-flex justify-content-between' data-id='" + task.id + "'>" + 
+      return "<div class='col-12 mb-3 p-2 border rounded task d-flex justify-content-between shadow' data-id='" + task.id + "'>" + 
       "<input type='checkbox' class='mark-complete mr-2' data-id='" + task.id + "'" + (task.completed ? "checked" : "") + ">" +
-      "<p class='task-content d-inline px-2'>" + task.content + "</p>" +
-      "<button class='delete float-right btn btn-outline-danger btn-sm' data-id='" + task.id + "'>Delete</button>" +
+      "<p class='task-content d-inline px-2 my-2 text-wrap  text-capitalize fw-bold'>" + task.content + "</p>" +
+      "<button class='delete float-right btn btn-outline-danger btn-sm fw-bold' data-id='" + task.id + "'>Delete</button>" +
     "</div>";
     });
     $('#tasks').html(htmlString);
@@ -23,10 +23,10 @@ import {
 
   var displayAllTasks = function (response) {
     var htmlString = response.tasks.map(function(task) {
-      return "<div class='col-12 mb-3 p-2 border rounded task d-flex justify-content-between'>" + 
+      return "<div class='col-12 mb-3 p-2 border rounded task d-flex justify-content-between shadow'>" + 
         "<input type='checkbox' class='mark-complete mr-2' data-id='" + task.id + "'" + (task.completed ? "checked" : "") + ">" +
-        "<p class='task-content d-inline px-2'>" + task.content + "</p>" +
-        "<button class='delete float-right btn btn-outline-danger btn-sm' data-id='" + task.id + "'>Delete</button>" +
+        "<p class='task-content d-inline px-2 my-2 text-wrap  text-capitalize fw-bold'>" + task.content + "</p>" +
+        "<button class='delete float-right btn btn-outline-danger btn-sm fw-bold' data-id='" + task.id + "'>Delete</button>" +
       "</div>";
     });
   
